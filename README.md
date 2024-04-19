@@ -26,45 +26,30 @@
 <details>
  <summary>( II ) Multiply the matrix by the scalar.</summary>
 
- 1. ***Input and Initialization***:
-    - We start by asking the user to enter the number of rows and columns for a matrix.
-    - For example, if the user enters `3` for rows and `4` for columns, we will create a matrix with 3 rows and 4 columns.
+ 1. ***Function Definitions***:
+    - `void read_matrix(ll row, ll column, int** matrix)`: This function reads the elements of a matrix from the user. It takes the number of rows and columns as well as a pointer to a pointer of integers (which represents the matrix) as arguments.
+    - `void write_matrix(ll row, ll column, int** matrix)`: This function prints the matrix to the console. It also takes the number of rows and columns and the matrix as arguments.
+    - `void multiply_by_scalar(ll row, ll column, int** matrix, ll scalar)`: This function multiplies each element of the matrix by a scalar value provided by the user.
 
- 2. ***Reading the Matrix***:
-    - We ask the user to input the elements of the matrix (numbers).
-    - For example, if the user enters the following elements:
-        ```
-        1 2 3 4
-        5 6 7 8
-        9 10 11 12
-        ```
-        The program will store these values in the matrix.
+ 2. ***Main Function***:
+    - The `main` function begins with a greeting message to the user.
+    - It then prompts the user to enter the number of rows and columns for the matrix.
+    - Memory is dynamically allocated for the matrix using `new` based on the number of rows and columns entered by the user.
+    - The `read_matrix` function is called to read the matrix elements from the user.
+    - The `write_matrix` function is called to print the original matrix.
+    - The user is prompted to enter a scalar value.
+    - The `multiply_by_scalar` function is called to multiply the matrix by the scalar.
+    - The `write_matrix` function is called again to print the modified matrix.
 
- 3. ***Printing the Matrix***:
-    - We display the matrix to the user.
-    - The output will look like this:
-        ```
-        Your Matrix is:
-        1   2   3   4
-        5   6   7   8
-        9   10  11  12
-        ```
+ 3. ***Program Flow***:
+    - The user is interactively involved throughout the program, entering the size of the matrix, its elements, and the scalar value for multiplication.
+    - The program outputs the matrix before and after the scalar multiplication.
 
- 4. ***Scalar Multiplication***:
-    - We ask the user to enter a scalar value (a single number).
-    - For example, if the user enters `2`, we will multiply each element of the matrix by 2.
-    - The resulting matrix will be:
-        ```
-        2   4   6   8
-        10  12  14  16
-        18  20  22  24
-        ```
-
-5. ***Memory Management***:
+ 4. ***Memory Management***:
     - We allocate memory for the matrix dynamically using `new`.
     - After using the matrix, we free the allocated memory using `delete[]`.
 
-6. ***End of Program***:
+ 5. ***End of Program***:
     - We display a thank-you message and terminate the program.
 
 </details>
