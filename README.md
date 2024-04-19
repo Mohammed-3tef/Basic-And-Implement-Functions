@@ -2,7 +2,7 @@
 
 ## The Algorithms :
 <details>
- <summary>H.cpp</summary>
+ <summary>Sequence Arrangement Solver.cpp</summary>
  
  1. ***Input and Initialization***:
     - `int n;`: We declare an integer variable `n` to store the number of elements (people in line).
