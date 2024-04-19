@@ -70,6 +70,53 @@
 
 
 <details>
- <summary>( IV ) .</summary>
+ <summary>( IV ) Multiply the matrix by the scalar.</summary>
+
+ 1. ***Input and Initialization***:
+    - We start by asking the user to enter the number of rows and columns for a matrix.
+    - For example, if the user enters `3` for rows and `4` for columns, we will create a matrix with 3 rows and 4 columns.
+
+ 2. ***Reading the Matrix***:
+    - We ask the user to input the elements of the matrix (numbers).
+    - For example, if the user enters the following elements:
+        ```
+        1 2 3 4
+        5 6 7 8
+        9 10 11 12
+        ```
+        The program will store these values in the matrix.
+
+ 3. ***Printing the Matrix***:
+    - We display the matrix to the user.
+    - The output will look like this:
+        ```
+        Your Matrix is:
+        1   2   3   4
+        5   6   7   8
+        9   10  11  12
+        ```
+
+ 4. ***Scalar Multiplication***:
+    - We ask the user to enter a scalar value (a single number).
+    - For example, if the user enters `2`, we will multiply each element of the matrix by 2.
+    - The resulting matrix will be:
+        ```
+        2   4   6   8
+        10  12  14  16
+        18  20  22  24
+        ```
+
+5. ***Memory Management***:
+    - We allocate memory for the matrix dynamically using `new`.
+    - After using the matrix, we free the allocated memory using `delete[]`.
+
+6. ***End of Program***:
+    - We display a thank-you message and terminate the program.
+
+</details>
+
+
+<details>
+ <summary>( V ) .</summary>
 
 </details>
