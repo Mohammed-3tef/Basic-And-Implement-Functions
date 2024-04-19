@@ -1,8 +1,10 @@
-# The Algorithm
+# Basic Projects
 
-### Algorithm H.cpp:
-![image](https://github.com/Mohammed-Atef-20231143/Basics/assets/161865675/bf073561-4fb6-455f-af6c-0c4f015aac67)
-![image](https://github.com/Mohammed-Atef-20231143/Basics/assets/161865675/9f32eecc-2257-4927-b806-d91be819ac2a)
+## The Algorithms :
+<details>
+ <summary>H.cpp</summary>
+ ![Screenshot 2024-04-19 165545](https://github.com/Mohammed-Atef-20231143/Basics/assets/161865675/aaed0d78-93c1-476f-ad6c-72b25c83669d)
+
 
  1. ***Input and Initialization***:
     - `int n;`: We declare an integer variable `n` to store the number of elements (people in line).
@@ -24,5 +26,7 @@
         - We continue this process until we reach the end of the chain (when the next position is zero).
 
  4. ***End of Program***
+</details>
 
-###
+### 
+
