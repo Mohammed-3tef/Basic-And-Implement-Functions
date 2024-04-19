@@ -3,9 +3,7 @@
 ## The Algorithms :
 <details>
  <summary>H.cpp</summary>
- ![Screenshot 2024-04-19 165545](https://github.com/Mohammed-Atef-20231143/Basics/assets/161865675/aaed0d78-93c1-476f-ad6c-72b25c83669d)
-
-
+ 
  1. ***Input and Initialization***:
     - `int n;`: We declare an integer variable `n` to store the number of elements (people in line).
     - `cin >> n;`: We read the value of `n` from the standard input (keyboard).
