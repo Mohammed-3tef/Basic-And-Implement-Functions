@@ -49,8 +49,23 @@
 
 
 <details>
- <summary>( III ) .</summary>
+ <summary>( III ) The Most Repeated Character.</summary>
 
+1. ***Function `mostFrequent`***:
+    - This function takes a string `text` as input.
+    - It initializes variables: `max` (to track the maximum count), `count` (to count occurrences of each character), and `maxCharcter` (to store the most frequent character).
+    - The outer loop iterates over characters from space `' '` to tilde `'~'`.
+    - The inner loop counts how many times the current character appears in the input string `text`.
+    - If the count is greater than the current maximum, it updates the maximum count and the most frequent character.
+    - The function returns the most frequent character.
+
+2. ***Main Function***:
+    - The `main` function starts by declaring an integer variable `test`.
+    - It reads a string `txt` from standard input (keyboard).
+    - It calls the `mostFrequent` function with `txt` as the argument and prints the result (the most frequent character).
+
+3. ***End of Program.***:
+    - The program returns 0 to indicate successful execution.
 </details>
 
 
