@@ -2,6 +2,7 @@
 ---> **Small Basics Projects by some languages like: C++, Python, ....etc.**
 
 ## The Algorithms :
+--> **They are algorithms for some not easy functions, And here they are:**
 
 <details>
  <summary>( I ) Count Letters.</summary>
@@ -22,7 +23,7 @@
  3. ***End of Program***:
     - The program returns 0 to indicate successful execution.
 
-In summary, this code reads a string, sorts its characters, and then prints the RLE (character followed by its count) of the string. For example, if the input string is "aaabbbcc", the output will be:
+In summary, this code reads a string, sorts its characters, and then prints the RLE (character followed by its count) of the string. For example, if the input string is "**aaabbbcc**", the output will be:
 ```
 a : 3
 b : 3
