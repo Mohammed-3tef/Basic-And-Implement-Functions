@@ -4,7 +4,36 @@
 ## The Algorithms :
 
 <details>
- <summary>( I ) Distinct Characters.</summary>
+ <summary>( I ) Count Letters.</summary>
+
+ 1. ***Function `printRLE`***:
+    - This function takes a string `s` as input.
+    - It sorts the characters in the string in ascending order.
+    - It then counts the occurrences of each character:
+        - While the current character is the same as the next character, it increments the count and moves to the next character.
+        - When the next character is different, it prints the character and its count.
+    - The function effectively prints the Run-Length Encoding (RLE) of the input string.
+
+ 2. ***Main Function***:
+    - The `main` function starts by enabling fast I/O using the `Hero` macro.
+    - It reads a string `x` from standard input (keyboard).
+    - It calls the `printRLE` function with `x` as the argument to print the RLE of the input string.
+
+ 3. ***End of Program***:
+    - The program returns 0 to indicate successful execution.
+
+In summary, this code reads a string, sorts its characters, and then prints the RLE (character followed by its count) of the string. For example, if the input string is "aaabbbcc", the output will be:
+```
+a : 3
+b : 3
+c : 2
+```
+
+</details>
+
+
+<details>
+ <summary>( II ) Distinct Characters.</summary>
 
  1. ***Function `cntDistinct`***:
     - The function `cntDistinct` takes a string `str` as its parameter.
@@ -24,7 +53,7 @@
 
 
 <details>
- <summary>( II ) Multiply the matrix by the scalar.</summary>
+ <summary>( III ) Multiply the matrix by the scalar.</summary>
 
  1. ***Function Definitions***:
     - `void read_matrix(ll row, ll column, int** matrix)`: This function reads the elements of a matrix from the user. It takes the number of rows and columns as well as a pointer to a pointer of integers (which represents the matrix) as arguments.
@@ -55,7 +84,7 @@
 </details>
 
 <details>
- <summary>( III )  Sequence Arrangement Solver.</summary>
+ <summary>( IV )  Sequence Arrangement Solver.</summary>
  
  1. ***Input and Initialization***:
     - `int n;`: We declare an integer variable `n` to store the number of elements (people in line).
@@ -81,7 +110,7 @@
 
 
 <details>
- <summary>( IV ) The Most Repeated Character.</summary>
+ <summary>( V ) The Most Repeated Character.</summary>
 
 1. ***Function `mostFrequent`***:
     - This function takes a string `text` as input.
@@ -102,6 +131,6 @@
 
 
 <details>
- <summary>( V ) .</summary>
+ <summary>( VI ) .</summary>
 
 </details>
