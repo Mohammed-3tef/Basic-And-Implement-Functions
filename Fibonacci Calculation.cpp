@@ -28,7 +28,7 @@ long long fib(int n){
 
 int main ()
 {
-    long long n;
+    ll n;
     cout << "Please enter number of Fibonacci items you want: ";
     cin >> n;
     for (int i = 1; i <= n; i++){
