@@ -54,7 +54,46 @@ c : 2
 
 
 <details>
- <summary>( III ) Multiply the matrix by the scalar.</summary>
+ <summary>( III ) Five in One.</summary>
+ 
+1. ***Function Definitions***:
+      - `Max()` : This function sorts the array in descending order (largest to smallest) and then prints the first element, which is the largest number in the array.
+      - `Min()` : Similar to the Max function, but it sorts the array in ascending order (smallest to largest) and prints the first element, which is the smallest number.
+      - `Prime()` : This function counts the number of prime numbers in the array. A prime number is a number greater than 1 that has no positive divisors other than 1 and itself.
+      - `Palindrome()` : This function checks how many numbers in the array are palindromes. A palindrome is a number that reads the same backward as forward.
+      - `divisors()` : This function returns the number of divisors of a given number. A divisor is a number that can divide another number without leaving a remainder.
+
+2. ***Main Function***:
+
+   1. **Read Number of Elements:**
+      - The program prompts the user to enter the number of elements (`num`) that will be in the array.
+   
+   2. **Create and Fill the Array:**
+      - An array `arr` is created with the size specified by the user. The program then reads the elements of the array from the user input.
+   
+   3. **Find and Display Maximum and Minimum:**
+      - The `Max` and `Min` functions are called to find and display the largest and smallest numbers in the array.
+   
+   4. **Count and Display Prime Numbers:**
+      - The `Prime` function is called to count and display the number of prime numbers in the array.
+   
+   5. **Count and Display Palindrome Numbers:**
+      - The `Palindrome` function is called to count and display the number of palindrome numbers in the array.
+   
+   6. **Find the Number with Maximum Divisors:**
+      - A loop runs through each element in the array, calling the `divisors` function to find the number of divisors for each element. It keeps track of the number with the most divisors and, in case of a tie, the larger number.
+   
+   7. **Display the Number with Maximum Divisors:**
+      - After the loop, the program prints the number that has the maximum number of divisors.
+   
+   8. **End of Program:**
+      - The program returns 0, which is a signal that the program has ended successfully.
+
+</details>
+
+
+<details>
+ <summary>( IV ) Multiply the matrix by the scalar.</summary>
 
  1. ***Function Definitions***:
     - `void read_matrix(ll row, ll column, int** matrix)`: This function reads the elements of a matrix from the user. It takes the number of rows and columns as well as a pointer to a pointer of integers (which represents the matrix) as arguments.
@@ -85,7 +124,7 @@ c : 2
 </details>
 
 <details>
- <summary>( IV )  Sequence Arrangement Solver.</summary>
+ <summary>( V )  Sequence Arrangement Solver.</summary>
  
  1. ***Input and Initialization***:
     - `int n;`: We declare an integer variable `n` to store the number of elements (people in line).
@@ -111,7 +150,7 @@ c : 2
 
 
 <details>
- <summary>( V ) The Most Repeated Character.</summary>
+ <summary>( VI ) The Most Repeated Character.</summary>
 
 1. ***Function `mostFrequent`***:
     - This function takes a string `text` as input.
@@ -132,6 +171,6 @@ c : 2
 
 
 <details>
- <summary>( VI ) .</summary>
+ <summary>( VII ) .</summary>
 
 </details>
