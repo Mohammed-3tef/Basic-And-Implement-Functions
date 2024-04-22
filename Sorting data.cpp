@@ -20,8 +20,6 @@ void sorting(int num, deque<int> &data)
     }
 }
 
-
-
 int main()
 {
     int num;
