@@ -28,4 +28,5 @@ int main()
     cin >> num;
     deque<int>data;
     sorting(num,data);
+    return 0;
 }
