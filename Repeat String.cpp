@@ -18,7 +18,7 @@ using namespace std;
  ----> return string
  */
 
-string stringRepeat (string st, ll r, string sep = ""){
+string stringRepeat (string st, ll r = 2, string sep = ""){
     string result;
     for (int i = 0; i < r; ++i) {
         result += st;
