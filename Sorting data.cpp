@@ -3,7 +3,7 @@
 #include <algorithm>
 using namespace std;
 
-void sorting(int num, deque<int>data)
+void sorting(int num, deque<int> &data)
 {
     for (int i = 0; i < num; i++)         // Get data.
     {
@@ -26,7 +26,7 @@ int main()
 {
     int num;
     cin >> num;
-    deque<int>data;
-    sorting(num,data);
+    deque<int> data;
+    sorting(num, data);
     return 0;
 }
