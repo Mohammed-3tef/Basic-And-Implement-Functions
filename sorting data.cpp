@@ -3,13 +3,9 @@
 #include <algorithm>
 using namespace std;
 
-int main()
+void sorting(int num, deque<int>data)
 {
-    int n;
-    cin >> n;
-
-    deque<int>data;
-    for (int i = 0; i < n; i++)         // Get data.
+    for (int i = 0; i < num; i++)         // Get data.
     {
         int element;
         cin >> element;
@@ -18,8 +14,18 @@ int main()
 
     sort(data.begin(),data.end());      // Sort data.
 
-    for (int i = 0; i < n; i++)         // Print data.
+    for (int i = 0; i < num; i++)         // Print data.
     {
         cout << data[i] << " ";
     }
+}
+
+
+
+int main()
+{
+    int num;
+    cin >> num;
+    deque<int>data;
+    sorting(num,data);
 }
