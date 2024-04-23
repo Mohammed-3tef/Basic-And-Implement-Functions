@@ -1,4 +1,3 @@
-// =========== Count the number of unique characters and integers in a given String =========== \\
 #include <bits/stdc++.h>
 #define ll long long
 #define ld long double
