@@ -1,4 +1,4 @@
-// =========== Count the number of unique characters in a given String =========== \\
+// =========== Count the number of unique characters and integers in a given String =========== \\
 #include <bits/stdc++.h>
 #define ll long long
 #define ld long double
@@ -12,14 +12,13 @@
 const ll MAX_CHAR = 256;
 using namespace std;
 
-int cntDistinct(string str)
+int cntDistinct(string str)            // This function is specific to strings.
 {
     // Set to store unique characters in the given string.
     unordered_set<char> s;
 
     // Loop to traverse the string.
-    for (int i = 0; i < str.size(); i++)
-    {
+    for (int i = 0; i < str.size(); i++){
         // Insert the current character into the set.
         s.insert(str[i]);
     }
@@ -27,8 +26,22 @@ int cntDistinct(string str)
     return s.size();
 }
 
+int countDistinct(int arr[], int n)             // This function is specific to arrays of integers.
+{
+    set<int> uniqueElements;
+    for (int i = 0; i < n; ++i) {
+        uniqueElements.insert(arr[i]);
+    }
+    return uniqueElements.size();
+}
+
 int main(){
     string e; cin >> e;
-    cout << cntDistinct(e) << endl;
+    cout << "Number of distinct values: " << cntDistinct(e) << endl;
+
+    int n; cin >> n;
+    int arr[n];
+    for (int i = 0; i < n; ++i) {cin >> arr[i];}
+    cout << "Number of distinct values: " << countDistinct(arr, n) << endl;
     return 0;
 }
