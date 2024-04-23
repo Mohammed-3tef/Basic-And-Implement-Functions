@@ -52,6 +52,7 @@ long long getIndex(vector<ll> v, ll K)          // Function to print the index o
 }
 
 int main(){
+    Hero
     string e; cin >> e;
     cout << "Number of distinct values: " << cntDistinct(e) << endl;
 
