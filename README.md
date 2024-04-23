@@ -33,19 +33,43 @@ c : 2
 
 
 <details>
- <summary>( II ) Distinct Characters.</summary>
+ <summary>( II ) Distinct Values & Get Index.</summary>
 
- 1. ***Function `cntDistinct`***:
-    - The function `cntDistinct` takes a string `str` as its parameter.
-    - It creates an `unordered_set` named `s`, which stores unique elements.
-    - A `for` loop iterates over each character in the string `str`.
-    - Each character is inserted into the set `s`. If the character is already present, the set remains unchanged because sets only store unique elements.
-    - After the loop completes, the function returns the size of the set `s`, which represents the count of unique characters in the string.
+ 1. ***Function Definitions***:
+
+    1. **`int cntDistinct(string str)`**:
+        - This function takes a string `str` as input.
+        - It calculates the number of distinct characters (unique characters) in the given string.
+        - Here's how it works:
+            - It uses an `unordered_set<char>` (a set that automatically removes duplicates) to store unique characters.
+            - The loop traverses the string, and for each character:
+                - If the character is not already in the set, it inserts it.
+                - If the character is already in the set, it is ignored (since it's not unique).
+            - Finally, it returns the size of the set, which represents the count of distinct characters in the string.
+    
+    2. **`int countDistinct(int arr[], int n)`**:
+        - This function takes an array of integers `arr` and its size `n` as input.
+        - It calculates the number of distinct elements in the array.
+        - Here's how it works:
+            - It uses a `set<int>` (a set that automatically removes duplicates) to store unique elements.
+            - The loop traverses the array, and for each element:
+                - If the element is not already in the set, it inserts it.
+                - If the element is already in the set, it is ignored (since it's not unique).
+            - Finally, it returns the size of the set, which represents the count of distinct elements in the array.
+    
+    3. **`long long getIndex(vector<ll> v, ll K)`**:
+        - This function takes a vector of `ll` (long long) integers `v` and a target value `K`.
+        - It searches for `K` in the vector and returns its index if found; otherwise, it returns -1.
+        - Here's how it works:
+            - It uses the `find` function from the `<algorithm>` library to search for `K` in the vector.
+            - If `K` is found, it calculates the index by subtracting the iterator position from the beginning of the vector.
+            - If `K` is not present in the vector, it returns -1.
 
  2. ***Main Function***:
-    - The `main` function starts by declaring a string variable `e`.
-    - It reads a string from standard input (keyboard) and stores it in `e`.
-    - It then calls the `cntDistinct` function with `e` as the argument and prints the result, which is the number of unique characters in the string `e`.
+    - Reads a string `e` and calculates the number of distinct characters using `cntDistinct(e)`.
+    - Reads an integer `n` and an array of integers `arr`. Calculates the number of distinct elements using `countDistinct(arr, n)`.
+    - Reads a `long long` integer `k` and finds its index in the array using `getIndex(arr, k)`.
+    - Prints the results accordingly.
     - Finally, the program returns 0, indicating successful execution.
  
  3. ***End of Program.***
