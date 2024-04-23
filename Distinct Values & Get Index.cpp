@@ -35,6 +35,23 @@ int countDistinct(int arr[], int n)             // This function is specific to 
     return uniqueElements.size();
 }
 
+long long getIndex(vector<ll> v, ll K)          // Function to print the index of an element in array of integers.
+{
+    auto it = find(v.begin(), v.end(), K);
+
+    // If an element was found.
+    if (it != v.end()){
+
+        // Calculating the index of K.
+        ll index = it - v.begin();
+        return index;
+    }
+    else {
+        // If the element is not present in the vector.
+        return -1;
+    }
+}
+
 int main(){
     string e; cin >> e;
     cout << "Number of distinct values: " << cntDistinct(e) << endl;
@@ -43,5 +60,8 @@ int main(){
     int arr[n];
     for (int i = 0; i < n; ++i) {cin >> arr[i];}
     cout << "Number of distinct values: " << countDistinct(arr, n) << endl;
+
+    ll k; cin >> k;
+    cout << "The index of an element : "<< getIndex(arr, k) << endl;
     return 0;
 }
