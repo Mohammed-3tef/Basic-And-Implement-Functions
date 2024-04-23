@@ -16,7 +16,6 @@
     - The function effectively prints the Run-Length Encoding (RLE) of the input string.
 
  2. ***Main Function***:
-    - The `main` function starts by enabling fast I/O using the `Hero` macro.
     - It reads a string `x` from standard input (keyboard).
     - It calls the `printRLE` function with `x` as the argument to print the RLE of the input string.
 
