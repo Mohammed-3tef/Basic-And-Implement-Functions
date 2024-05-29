@@ -5,29 +5,9 @@
 ---> **They are algorithms for some not easy functions, And here they are:**
 
 <details>
- <summary>( I ) Count Letters.</summary>
+ <summary>( I ) Count Words & Letters.</summary>
 
- 1. ***Function `printRLE`***:
-    - This function takes a string `s` as input.
-    - It sorts the characters in the string in ascending order.
-    - It then counts the occurrences of each character:
-        - While the current character is the same as the next character, it increments the count and moves to the next character.
-        - When the next character is different, it prints the character and its count.
-    - The function effectively prints the Run-Length Encoding (RLE) of the input string.
 
- 2. ***Main Function***:
-    - It reads a string `x` from standard input (keyboard).
-    - It calls the `printRLE` function with `x` as the argument to print the RLE of the input string.
-
- 3. ***End of Program***:
-    - The program returns 0 to indicate successful execution.
-
-In summary, this code reads a string, sorts its characters, and then prints the RLE (character followed by its count) of the string. For example, if the input string is "**aaabbbcc**", the output will be:
-```
-a : 3
-b : 3
-c : 2
-```
 
 </details>
 
