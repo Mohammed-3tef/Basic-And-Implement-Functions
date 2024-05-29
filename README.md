@@ -7,8 +7,61 @@
 <details>
  <summary>( I ) Count Words & Letters.</summary>
 
+ 1. ***Function Definitions***:
 
+    1. **`void letter_count(string s)`**:
+       - This function counts the occurrences of each letter in a given string and prints them out. Here’s how it works step by step:
+          - `sort(all(s));`: The string s is sorted alphabetically, so all identical letters are next to each other.
+          - `for (int i = 0; s[i] != '\0'; i++)`: A for loop starts, iterating over each character in the string until the null character \0 is reached (end of the string).
+          - `if (isalpha(s[i]))`: Inside the loop, it checks if the current character is an alphabetic character.
+          - `ll count = 1;`: A variable count is initialized to 1 to start counting the occurrences of the current letter.
+          - `while (s[i] == s[i + 1]) {i++, count++;}`: A while loop continues as long as the current character is the same as the next one. For each match, i is incremented to move to the next character, and count is incremented to keep track of the number of occurrences.
+          - `cout << s[i] << " => "<< count << endl;`: Once the while loop ends, the character and its count are printed.
+    
+    2. **`int word_count(string st, char sep = ' ')`**:
+       - This function counts the number of words in a string, where words are separated by a specified separator (default is a space character ’ ') .Here’s how it works step by step:
+          - `int count = 0;`: Initializes a word count to 0.
+          - `bool inWord = false;`: A boolean flag to track whether the current position is inside a word.
+          - `for (int i = 0; i < st.length(); i++)`: A for loop iterates over each character in the string.
+          - `if (st[i] == sep)`: If the current character is the separator, it checks if it’s at the end of a word.
+          - `else {inWord = true;}`: If the current character is not a separator, it’s part of a word, so set the flag to true.
+          - `if (inWord) {count++;}`: After the loop, if it ends inside a word, increment the word count.
 
+ 2. ***Main Function***:
+    - It reads a string `x` from the standard input.
+    - It calls `letter_count` to print the count of each letter in x.
+    - It calls `word_count` to print the total number of words in x.
+    - Finally, the program returns 0, indicating successful execution.
+ 
+ 3. ***Example.***:
+
+    Suppose we have the following input string:
+    ```plaintext
+    "Hello World! Welcome to C++ programming."
+    ```
+    
+    Here's what the output would look like after running the `main` function with this input:
+    
+    ```plaintext
+    The number of letters in the sentence in details:
+    C => 1
+    d => 1
+    e => 3
+    g => 2
+    H => 1
+    l => 3
+    m => 2
+    n => 1
+    o => 4
+    p => 1
+    r => 2
+    t => 1
+    W => 2
+    
+    The number of words in the sentence = 5 words.
+    ```
+    
+ 5. ***End of Program.***
 </details>
 
 
