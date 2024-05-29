@@ -45,20 +45,23 @@
     ```plaintext
     The number of letters in the sentence in details:
     C => 1
+    H => 1
+    W => 2
+    a => 1
+    c => 1
     d => 1
     e => 3
     g => 2
-    H => 1
-    l => 3
-    m => 2
+    i => 1
+    l => 4
+    m => 3
     n => 1
-    o => 4
+    o => 5
     p => 1
-    r => 2
+    r => 3
     t => 1
-    W => 2
     
-    The number of words in the sentence = 5 words.
+    The number of words in the sentence = 6 words.
     ```
     
  5. ***End of Program.***
