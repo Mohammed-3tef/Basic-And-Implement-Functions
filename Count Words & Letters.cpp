@@ -14,7 +14,7 @@ using namespace std;
 void letter_count(string s) {
     sort(all(s));
     for (int i = 0; s[i] != '\0'; i++) {
-        if (isalpha(s[i])) {
+        if (!isspace(s[i])) {
 
             // Counting occurrences of s[i].
             ll count = 1;
