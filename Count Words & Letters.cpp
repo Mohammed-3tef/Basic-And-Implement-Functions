@@ -8,13 +8,12 @@
 #define no cout << "NO" << endl;
 #define yes cout << "YES" << endl;
 #define Hero ios::sync_with_stdio(0), ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
-const ll MAX_CHAR = 256;
 using namespace std;
 
 void letter_count(string s) {
     sort(all(s));
     for (int i = 0; s[i] != '\0'; i++) {
-        if (!isspace(s[i])) {
+        if (isalpha(s[i])) {
 
             // Counting occurrences of s[i].
             ll count = 1;
