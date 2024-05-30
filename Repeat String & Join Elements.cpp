@@ -11,7 +11,7 @@
 using namespace std;
 
 /*
- --> This Function Will Repeat The String:
+ --> This Function "stringRepeat" Will Repeat The String:
  ----> string st: The String That Will Be Repeated
  ----> long long r: The Number Of Repeating
  ----> string sep: The Separator Between The Repeated Strings
@@ -27,11 +27,26 @@ string stringRepeat (string st, ll r = 2, string sep = ""){
     return result;
 }
 
+/*
+ --> The join function concatenates elements of a "vector<string>" into a single string, with each
+     element separated by a specified separator "sep". The default separator is a space character " ".
+ */
+
+string join (vector<string> names, string sep = " "){
+  string result;
+  for (int i = 0; i < names.size(); i++){
+    result += names[i];
+    if (i != names.size() -1) {result += sep;}
+  }
+  return result;
+}
+
 int main() {
     Hero;
     ll num;
     string txt, cr;
     cin >> txt >> num >> cr;
     cout << stringRepeat(txt, num, cr) << endl;
+    cout << join({"FCAI", "Cairo", "University"}) << endl;
     return 0;
 }
