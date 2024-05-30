@@ -13,6 +13,14 @@
         ios::sync_with_stdio(0), ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
 using namespace std;
 
+// Function to check if the target in the vector or not.
+bool In_vec(vector<long long> arr, long long target){
+  for (int i = 0; i < arr.size(); i++){
+    if (arr[i] == target) {return true;}
+  }
+  return false;
+}
+
 // Function to add elements in a vector.
 long long Sum_elements_vec(vector<long long>v){
     return accumulate(v.begin(), v.end(), 0);
@@ -65,13 +73,15 @@ vector<long long> Sub_vec(vector<long long>v1, vector<long long>v2){
 int main()
 {
     Hero
-    ll num; cin >> num;
+    ll num, tar; cin >> num >> tar;
     vector <ll> arr1(num);
     vector <ll> arr2(num);
-
+        
     for (int i = 0; i < num; ++i) {cin >> arr1[i];}
     for (int i = 0; i < num; ++i) {cin >> arr2[i];}
 
+    cout << In_vec(arr1, tar) << endl;
+        
     // Create vectors to store the result.
     vector<ll> arr3 = Merge_vec(arr1, arr2);                  // Merge the two vectors and sort it.
     vector<ll> arr4 = Add_vec(arr1, arr2);                  // Add the two vectors.
