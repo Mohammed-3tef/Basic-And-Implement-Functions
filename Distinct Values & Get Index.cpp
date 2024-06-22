@@ -11,6 +11,10 @@
 const ll MAX_CHAR = 256;
 using namespace std;
 
+// Return The Distinct Vector
+// sort(arr.begin(), arr.end());
+// arr.erase(unique(arr.begin(), arr.end()), arr.end()); 
+
 int cntDistinct(string str)            // This function is specific to strings.
 {
     // Set to store unique characters in the given string.
