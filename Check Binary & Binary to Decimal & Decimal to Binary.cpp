@@ -6,7 +6,7 @@ using namespace std;
 #define yes cout <<  "Yes" << endl;         // An abbreviation
 #define no cout <<  "No" << endl;           // An abbreviation
 
-void check_binary(string num)
+void checkBinary(string num)
 {
     int count = 0;
     for (int i = 0; i < int(num.size()); i++)            
@@ -20,7 +20,7 @@ void check_binary(string num)
     else {no}
 }
 
-int binary_to_decimal(string num)
+int binaryToDecimal(string num)
 {
     int dec = 0;
     deque<char>bit;
@@ -35,7 +35,7 @@ int binary_to_decimal(string num)
     return dec;
 }
 
-string decimal_to_binary(int num){
+string decimalToBinary(int num){
     string bin = "";
 
     if (num == 0) {return "0";}
@@ -48,17 +48,28 @@ string decimal_to_binary(int num){
     return bin;
 }
 
+string decimalToAnyBase (int n, int k){
+    string res = "";
+    
+    while (n > 0){
+        res += to_string(n%k);
+        n /= k;
+    }
+    reverse(res.begin(), res.end());
+    return res;
+}
+
 int main(){
     string num;             
     cin >> num;
-    check_binary(num);                                 // Check if the number is binary.
+    checkBinary(num);                                 // Check if the number is binary.
 
-    int bin_to_dec = binary_to_decimal(num);           // Convert the binary number into decimal.
+    int bin_to_dec = binaryToDecimal(num);           // Convert the binary number into decimal.
     cout << bin_to_dec << endl;
 
     int num2;             
     cin >> num2;
-    string dec_to_bin = decimal_to_binary(num2);       // Convert the decimal number into binary.
+    string dec_to_bin = decimalToBinary(num2);       // Convert the decimal number into binary.
     cout << dec_to_bin << endl;
 
     return 0;
