@@ -29,7 +29,7 @@ void permuteRecVector(vector<int>& nums, int currentIndex, vector<vector<int>>& 
 
 vector<vector<int>> permuteVector(vector<int>& nums) {
     vector<vector<int>> result;
-    permuteRec(nums, 0, result);
+    permuteRecVector(nums, 0, result);
     return result;
 }
 
