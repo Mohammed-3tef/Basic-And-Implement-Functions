@@ -34,17 +34,55 @@ vector<vector<int>> permuteVector(vector<int>& nums) {
     return result;
 }
 
+// =========>>> Next Permutation of a vector of integers.
+
+vector<int> nextPermutation(vector<int>& nums) {
+    int k = -1;
+    int l = 0;
+    vector<int> res;
+
+    for (int i = nums.size() - 2; i >= 0; --i) {
+        if (nums[i] < nums[i + 1]) {
+            k = i;
+            break;
+        }
+    }
+
+    if (k == -1) {reverse(nums.begin(), nums.end());} 
+    else {
+        for (int i = nums.size() - 1; i > k; --i) {
+            if (nums[i] > nums[k]) {
+                l = i;
+                break;
+            }
+        }
+
+        swap(nums[k], nums[l]);
+        reverse(nums.begin() + k +1, nums.end());
+    }
+
+    for (int j = 0; j < nums.size(); ++j) {res.push_back(nums[j]);}
+    return res;
+}
+
 // ==================>>> Main Function ....
 
 int main() {
     Hero
-    vector<int> a = {1,2,3,4};
-    vector<vector<int>> res = permuteVector(a);
-    for (int i = 0; i < res.size(); ++i) {
-        for (int j = 0; j < res[i].size(); ++j) {
-            cout << res[i][j] << " ";
+    vector<int> a = {1,2,3};
+    vector<vector<int>> res1 = permuteVector(a);
+    vector<int> res2 = nextPermutation(a);
+    for (int i = 0; i < res1.size(); ++i) {
+        for (int j = 0; j < res1[i].size(); ++j) {
+            cout << res1[i][j] << " ";
         }
         cout << endl;
+    }
+    
+    cout << "=====================" << endl;
+    
+    for (int j = 0; j < res2.size(); ++j) {
+        cout << res2[j] << " ";
     }
     return 0;
 }
