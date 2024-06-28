@@ -12,7 +12,8 @@
         ios_base::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
 using namespace std;
 
-// ================>>> These Functions For Vectors ....
+// ==================>>> These Function are specific to Vectors ....
+// =========>>> You can use this function with any another datatype.
 
 void permuteRecVector(vector<int>& nums, int currentIndex, vector<vector<int>>& result) {
     if (currentIndex == nums.size() - 1) {
@@ -33,7 +34,7 @@ vector<vector<int>> permuteVector(vector<int>& nums) {
     return result;
 }
 
-// ================>>> Main Function ....
+// ==================>>> Main Function ....
 
 int main() {
     Hero
