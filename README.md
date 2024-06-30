@@ -5,7 +5,77 @@
 ---> **They are algorithms for some not easy functions, And here they are:**
 
 <details>
- <summary>( I ) Count Words & Letters.</summary>
+ <summary>( I ) Codes.</summary>
+ 
+  1. ***Function Definitions***:
+     
+     1. **`checkBinary(string num)`**:
+        - `int count = 0;`: Initializes an integer variable count to zero. This variable will keep track of the number of valid binary digits encountered.
+        - `for (int i = 0; i < int(num.size()); i++)`: Iterates through each character in the input string `num`.
+        - `int(num.size())`: calculates the length of the string.
+        - `if (num[i] == '0' || num[i] == '1')`: Checks whether the current character at index `i` is either ‘0’ or ‘1’.
+        - Inside the `if` block, the `count` variable is incremented by 1.
+        - This means that for each valid binary digit encountered (‘0’ or ‘1’), the count increases.
+        - After processing all characters, the function compares the final value of `count` with the length of the input string `num`.
+        - If they are equal, it means that all characters in `num` are valid binary digits.
+        - If the condition is true (i.e., all characters are valid binary digits), the function returns “`Yes`”.
+        - Otherwise (if some characters are not valid binary digits), it returns “`No`”.
+
+     2. **`binaryToDecimal(string num)`**:
+        - `int dec = 0;`: Initializes an integer variable `dec` to store the final decimal value.
+        - `deque<char> bit;`: Creates a deque (double-ended queue) called bit to store the reversed binary digits.
+        - `for (int i = 0; i < int(num.size()); i++)`: Iterates through each character in the input string `num`.
+        - `bit.push_front(num[i]);`: Adds each character to the front of the `bit` deque.
+        - This effectively reverses the order of the binary digits.
+        - `for (int i = 0; i < int(bit.size()); i++)`: Iterates through each index in the `bit` deque.
+        - `static_cast<int>(bit[i]-'0')`: Converts the character at index `i` (either ‘0’ or ‘1’) to an integer (0 or 1).
+        - `pow(2, i)`: Calculates 2 raised to the power of `i`.
+        - `dec += ...`: Adds the product of the converted digit and the appropriate power of 2 to the `dec` value.
+        - This step evaluates the value of each binary digit and accumulates the decimal value.
+        - After processing all binary digits, the function returns the accumulated `dec` value, which represents the decimal equivalent of the binary number.
+
+     3. **`decimalToBinary(int num)`**:
+        - `string bin = "";`: Initializes an empty string called bin to store the binary representation.
+        - `if (num == 0) {return "0";}`: Checks if the input `num` is zero.
+        - If it is, the function immediately returns “0” (since the binary representation of zero is just “0”).
+        - `while (num > 0) { ... }`: Enters a loop that continues until num becomes zero.
+        - Inside the loop, the following steps are performed for each iteration:
+           - `bin = char('0' + num % 2) + bin;`: Converts the remainder to a character (‘0’ or ‘1’) and appends it to the front of the `bin` string.
+           - The `+ bin` part ensures that we build the binary representation from right to left.
+           - `num /= 2;`: Divides num by 2, effectively shifting to the next binary place value.
+        - After processing all binary places, the function returns the accumulated `bin` string, which represents the binary equivalent of the decimal number.
+
+     4. **`addBinary(string A, string B)`**:
+        - `if (A.length() > B.length()) {return addBinary(B, A);}`:
+          - If the length of string `A` is greater than that of string `B`, swap the arguments and recursively call `addBinary(B, A)`.
+          - This ensures that `A` is not shorter than `B`.
+        - `int diff = B.length() - A.length();`: calculates the difference in lengths between `B` and `A`.
+        - `string padding;`: initializes an empty string called `padding`.
+        - The loop adds zeros to `padding` to make the lengths of `A` and `B` equal.
+        - The main loop iterates through each index from right to left (from the end of the strings).
+        - It performs binary addition based on the values of `A[i]` and `B[i]` and the carry (`carry`).
+        - The result is accumulated in the `res` string.
+        - Depending on the values of `A[i]` and `B[i]`, the carry is updated accordingly.
+        - If the carry is ‘1’, it propagates to the next position.
+        - If there’s a carry after processing all digits, it’s appended to the result.
+        - The result is reversed to obtain the correct order.
+        - Leading zeros are removed by finding the first non-zero digit.
+        - The function returns the final result, which is the sum of the binary numbers represented by `A` and `B`.
+
+     5. **`decimalToAnyBase(int n, int k)`**:
+        - `string res = "";`: Initializes an empty string called `res` to store the result.
+        - The `while` loop continues as long as `n` is greater than zero.
+        - Inside the loop:
+          - `to_string(n % k)`: Converts the remainder to a string and appends it to the `res` string.
+          - `n /= k`: Divides `n` by `k`, effectively shifting to the next place value.
+        - After processing all place values, the `res` string contains the digits in reverse order.
+        - `reverse(res.begin(), res.end())`: Reverses the order of characters in the `res` string.
+        - The function returns the final result, which represents the number in the specified base.
+</details>
+
+
+<details>
+ <summary>( II ) Count Words & Letters.</summary>
 
  1. ***Function Definitions***:
 
@@ -69,7 +139,7 @@
 
 
 <details>
- <summary>( II ) Distinct Values & Get Index.</summary>
+ <summary>( III ) Distinct Values & Get Index.</summary>
 
  1. ***Function Definitions***:
 
@@ -113,7 +183,7 @@
 
 
 <details>
- <summary>( III ) Five in One.</summary>
+ <summary>( IV ) Five in One.</summary>
  
 1. ***Function Definitions***:
       - `Max()` : This function sorts the array in descending order (largest to smallest) and then prints the first element, which is the largest number in the array.
@@ -152,7 +222,7 @@
 
 
 <details>
- <summary>( IV ) Multiply the matrix by the scalar.</summary>
+ <summary>( V ) Multiply the matrix by the scalar.</summary>
 
  1. ***Function Definitions***:
     - `void read_matrix(ll row, ll column, int** matrix)`: This function reads the elements of a matrix from the user. It takes the number of rows and columns as well as a pointer to a pointer of integers (which represents the matrix) as arguments.
@@ -183,7 +253,7 @@
 </details>
 
 <details>
- <summary>( V )  Sequence Arrangement Solver.</summary>
+ <summary>( VI )  Sequence Arrangement Solver.</summary>
  
  1. ***Input and Initialization***:
     - `int n;`: We declare an integer variable `n` to store the number of elements (people in line).
@@ -209,7 +279,7 @@
 
 
 <details>
- <summary>( VI ) The Most Repeated Character.</summary>
+ <summary>( VII ) The Most Repeated Character.</summary>
 
 1. ***Function `mostFrequent`***:
     - This function takes a string `text` as input.
@@ -230,6 +300,11 @@
 
 
 <details>
- <summary>( VII ) .</summary>
+ <summary>( VIII ) .</summary>
+
+</details>
+
+<details>
+ <summary>( IX ) .</summary>
 
 </details>
