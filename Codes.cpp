@@ -109,5 +109,7 @@ int main(){
     string dec_to_bin = decimalToBinary(num2);       // Convert the decimal number into binary.
     cout << dec_to_bin << endl;
 
+    cout << addBinary("101", "111") << endl;       // Add two binary numbers.
+    cout << decimalToAnyBase(55, 7) << endl;       //  Convert the decimal number into any base.
     return 0;
 }
