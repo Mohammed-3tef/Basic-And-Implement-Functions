@@ -48,7 +48,7 @@ vector<vector<int>> subsets(vector<int>& nums) {
     vector<int> subset;
     vector<vector<int> > res;
     sort(nums.begin(),nums.end());
-    calcSubset(nums, res, subset, index);
+    calcSubset(nums, res, subset, 0);
     return res;
 }
 
