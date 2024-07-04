@@ -37,6 +37,7 @@ void operator<<(ostream& out, vector<string>& arr){
 void calcSubset(vector<int>& A, vector<vector<int> >& res, vector<int>& subset, int index) {
     res.push_back(subset);
     for (int i = index; i < A.size(); i++) {
+        if(i != index && A[i] == A[i-1]) {continue;}
         subset.push_back(A[i]);
         calcSubset(A, res, subset, i + 1);
         subset.pop_back();
@@ -46,7 +47,7 @@ void calcSubset(vector<int>& A, vector<vector<int> >& res, vector<int>& subset, 
 vector<vector<int>> subsets(vector<int>& nums) {
     vector<int> subset;
     vector<vector<int> > res;
-    int index = 0;
+    sort(nums.begin(),nums.end());
     calcSubset(nums, res, subset, index);
     return res;
 }
