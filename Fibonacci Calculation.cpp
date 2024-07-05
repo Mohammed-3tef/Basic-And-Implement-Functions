@@ -13,21 +13,14 @@
 const ll MAX_CHAR = 256;
 using namespace std;
 
-long long fib2(int n, ll current, ll next)
-{
-    if (n == 1)
-       return next;
-    else {
-       return fib2 (n - 1, next, next +  current);
-    }
+int fib(int n) {
+    if (n == 0) {return 0;}
+    else if (n == 1) {return 1;}
+    else {return fib(n - 1) + fib(n - 2);}
 }
 
-long long fib(int n){
-    return fib2 (n, 0, 1);
-}
-
-int main ()
-{
+int main () {
+    Hero
     ll n;
     cout << "Please enter number of Fibonacci items you want: ";
     cin >> n;
