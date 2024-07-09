@@ -95,14 +95,8 @@
           - `if (st[i] == sep)`: If the current character is the separator, it checks if it’s at the end of a word.
           - `else {inWord = true;}`: If the current character is not a separator, it’s part of a word, so set the flag to true.
           - `if (inWord) {count++;}`: After the loop, if it ends inside a word, increment the word count.
-
- 2. ***Main Function***:
-    - It reads a string `x` from the standard input.
-    - It calls `letter_count` to print the count of each letter in x.
-    - It calls `word_count` to print the total number of words in x.
-    - Finally, the program returns 0, indicating successful execution.
  
- 3. ***Example.***:
+ 2. ***Example.***:
 
     Suppose we have the following input string:
     ```plaintext
@@ -133,7 +127,6 @@
     The number of words in the sentence = 6 words.
     ```
     
- 5. ***End of Program.***
 </details>
 
 
