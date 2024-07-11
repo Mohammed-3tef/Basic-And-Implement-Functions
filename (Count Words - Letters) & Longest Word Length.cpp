@@ -10,7 +10,7 @@
 #define Hero ios::sync_with_stdio(0), ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
 using namespace std;
 
-void letter_count(string s) {
+void letterCount(string s) {
     sort(all(s));
     for (int i = 0; s[i] != '\0'; i++) {
         if (isalpha(s[i])) {
@@ -24,7 +24,7 @@ void letter_count(string s) {
     }
 }
 
-int word_count(string st, char sep = ' ') {
+int wordCount(string st, char sep = ' ') {
     int count = 0;
     bool inWord = false;
 
@@ -42,11 +42,25 @@ int word_count(string st, char sep = ' ') {
     return count;
 }
 
+int LongestWordLength(string str){
+    int n = str.length();
+    int res = 0, curr_len = 0;
+
+    for (int i = 0; i < n; i++) {
+        if (str[i] != ' ') { curr_len++; }
+        else {
+            res = max(res, curr_len);
+            curr_len = 0;
+        }
+    }
+    return max(res, curr_len);
+}
+
 int main() {
     Hero;
     string x; getline(cin, x);
     cout << "The number of letters in the sentence in details: " << endl;
-    letter_count(x);
-    cout << endl << "The number of words in the sentence = " << word_count(x) << " words." << endl;
+    letterCount(x);
+    cout << endl << "The number of words in the sentence = " << wordCount(x) << " words." << endl;
     return 0;
 }
