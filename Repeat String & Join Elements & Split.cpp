@@ -41,6 +41,25 @@ string join (vector<string> names, string sep = " "){
   return result;
 }
 
+// This function is designed to split a string into individual words based on a specified delimiter.
+
+string split(string str, string del = " "){
+    vector<string> temp;
+    string res = "";
+    int start, end = del.size() * -1;
+    do {
+        start = end + del.size();
+        end = str.find(del, start);
+        string x = str.substr(start, end - start);
+        if (!temp.empty()) {temp.push_back(x);}
+    } while (end != -1);
+    for (int i = 0; i < temp.size(); ++i) {
+        res += temp[i];
+        if (i != temp.size()-1) {res += " ";}
+    }
+    return res;
+}
+
 int main() {
     Hero;
     ll num;
@@ -48,5 +67,7 @@ int main() {
     cin >> txt >> num >> cr;
     cout << stringRepeat(txt, num, cr) << endl;
     cout << join({"FCAI", "Cairo", "University"}) << endl;
+    cout << split("geeks_for_geeks", "_") << endl;
+    
     return 0;
 }
