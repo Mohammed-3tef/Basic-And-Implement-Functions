@@ -1,5 +1,5 @@
 # Basic Projects:
----> **Small Basics Projects and Implement Functions by some languages like: C++, Python, .... etc.**
+---> **Small Basics Projects and Implement Functions by C++.**
 
 ## The Algorithms:
 ---> **They are algorithms for some not easy functions, And here they are:**
